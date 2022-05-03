@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Catalog from './components/Catalog';
 import PickMovie from './components/PickMovie';
 import AddMovie from './components/AddMovie';
@@ -12,9 +11,9 @@ function App() {
       <Router>
         <Header/>
         <Routes>
-          <Route path="/" element= {<Catalog/>}></Route>
-          <Route path="/movie" element={<PickMovie/>}></Route>
-          <Route path="/add" element={<AddMovie/>}></Route>
+          <Route path="/" element={<Catalog/>}/>
+          <Route path="/movie" element={<PickMovie/>}/>
+          <Route path="/add" element={<AddMovie/>}/>
         </Routes>
       </Router>
     </div>

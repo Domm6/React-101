@@ -1,14 +1,13 @@
-import React from 'react'
-import './Movie.css'
+import './Movie.css';
 
 const Movie = ({name, genre, image}) => {
     return (
         <div className="movie">
-            <img src={image}></img>
+            <img src={image} alt={name + " movie poster"}></img>
             <p className="movieName">{name}</p>
             <p className="movieGenre">{genre}</p>
         </div>
-    )
+    );
 }
 
-export default Movie
+export default Movie;

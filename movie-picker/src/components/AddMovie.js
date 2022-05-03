@@ -1,14 +1,14 @@
-import React, {useState} from 'react'
-import {useNavigate} from 'react-router-dom'
-import { data } from '../data/data'
-import './AddMovie.css'
+import {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {data} from '../data/data';
+import './AddMovie.css';
 
 const AddMovie = () => {
     let navigate = useNavigate();
 
-    const [name, setName] = useState('')
-    const [genre, setGenre] = useState('')
-    const [image, setImage] = useState('')
+    const [name, setName] = useState("");
+    const [genre, setGenre] = useState("");
+    const [image, setImage] = useState("");
 
     const nameHandler = (event) => {
         setName(event.target.value);
@@ -27,11 +27,9 @@ const AddMovie = () => {
             name: name,
             genre: genre,
             img: image
-        })
-        navigate("../", ({replace: true}));
+        });
+        navigate("/", ({replace: true}));
     }
-
-
 
     return (
         <div className="form">
@@ -44,7 +42,7 @@ const AddMovie = () => {
             <input onChange={imageHandler}></input>
             <button onClick={addMovieHandler}>Add Movie</button>
         </div>
-    )
+    );
 }
 
-export default AddMovie
+export default AddMovie;

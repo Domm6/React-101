@@ -1,0 +1,12 @@
+.App {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.value {
+    font-size: 20px;
+    padding: 20px;
+}
