@@ -35,8 +35,8 @@ const LoginForm = () => {
     return (
         <div className="cover">
             <h1>Login</h1>
-            <input type="text" placeholder="username" />
-            <input type="password" placeholder="password" />
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
 
             <div className="login-btn" onClick={popup}>Login</div>
 

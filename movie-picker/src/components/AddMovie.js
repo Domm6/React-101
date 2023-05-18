@@ -29,7 +29,7 @@ const AddReceipt = () => {
             totalAmount: totalAmount,
             date: date
         });
-        navigate("/", { replace: true });
+        navigate("/Catalog", { replace: true });
     }
 
     return (
