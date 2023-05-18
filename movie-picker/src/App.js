@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<LoginForm/>}/>
           <Route path="/movie" element={<PickMovie/>}/>
           <Route path="/add" element={<AddMovie/>}/>
-          <Route path="/login" element={<LoginForm/>}/>
+          <Route path="/Catalog" element={<Catalog/>}/>
         </Routes>
       </Router>
     </div>
