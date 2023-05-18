@@ -6,43 +6,52 @@ import './AddMovie.css';
 const AddMovie = () => {
     let navigate = useNavigate();
 
-    const [name, setName] = useState("");
-    const [genre, setGenre] = useState("");
-    const [image, setImage] = useState("");
+    import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { data } from '../data/data';
+import './AddMovie.css';
 
-    const nameHandler = (event) => {
-        setName(event.target.value);
+const AddReceipt = () => {
+    let navigate = useNavigate();
+
+    const [company, setCompany] = useState("");
+    const [totalAmount, setTotalAmount] = useState("");
+    const [date, setDate] = useState("");
+
+    const companyHandler = (event) => {
+        setCompany(event.target.value);
     }
 
-    const genreHandler = (event) => {
-        setGenre(event.target.value);
+    const totalAmountHandler = (event) => {
+        setTotalAmount(event.target.value);
     }
 
-    const imageHandler = (event) => {
-        setImage(event.target.value);
+    const dateHandler = (event) => {
+        setDate(event.target.value);
     }
 
-    const addMovieHandler = (event) => {
+    const addReceiptHandler = (event) => {
+        // Modify this logic to add the receipt data to the desired storage or state
         data.push({
-            name: name,
-            genre: genre,
-            img: image
+            company: company,
+            totalAmount: totalAmount,
+            date: date
         });
-        navigate("/", ({replace: true}));
+        navigate("/", { replace: true });
     }
 
     return (
         <div className="form">
-            <h1 className="title">Add Movie</h1>
-            <label>Movie Title</label>
-            <input onChange={nameHandler}></input>
-            <label>Genre</label>
-            <input onChange={genreHandler}></input>
-            <label>Image</label>
-            <input onChange={imageHandler}></input>
-            <button onClick={addMovieHandler}>Add Movie</button>
+            <h1 className="title">Add Receipt</h1>
+            <label>Company</label>
+            <input onChange={companyHandler}></input>
+            <label>Total Amount</label>
+            <input onChange={totalAmountHandler}></input>
+            <label>Date</label>
+            <input onChange={dateHandler}></input>
+            <button onClick={addReceiptHandler}>Add Receipt</button>
         </div>
     );
 }
 
-export default AddMovie;
+export default AddReceipt;
