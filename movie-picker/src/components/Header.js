@@ -7,7 +7,7 @@ const Header = () => {
             <h1 className="logo"> Movie Picker</h1>
             <div className="links">
                 <Link to="/">Movie Catalog</Link>
-                <Link to="/movie">Pick Movie</Link>
+                <Link to="/movie">Upload Receipt</Link>
                 <Link to="/add">Add Movie</Link>
                 <Link to="/login">Login</Link>
             </div>
