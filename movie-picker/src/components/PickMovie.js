@@ -4,30 +4,41 @@ import {data} from '../data/data';
 import './PickMovie.css';
 
 const PickMovie = () => {
-    const [randomMovie, setRandomMovie] = useState({});
-    const [picked, setPicked] = useState(false);
+    const [file, setFile] = useState()
 
-    const moviePicker = () => {
-        const randomPick = data[Math.floor(Math.random() * data.length)];
-        setRandomMovie(randomPick);
-        setPicked(true);
-    }
-
-    const pickAgain = () => {
-        setRandomMovie({});
-        setPicked(false);
+    function handleFile(event) {
+        setFile(event.target.files[0])
+        console.log(event.target.files[0])
     }
     
+    function handleUpload() {
+        const formData = new FormData()
+        formData.append('file', file)
+        fetch(
+            'url', 
+            {
+                method: "POST",
+                body: formData
+            }
+        ).then((response) => response.json())
+        .then(
+            (result) => {
+                console.log('success', result)
+            }
+        )
+        .catch(error => {
+            console.error("Error:", error)
+        })
+    }
+
     return (
         <div>
             <h1 className="title">Add a Receipt</h1>
-            {picked && 
-            <div className ="picked">
-                <div></div>
-                <Movie name={randomMovie.name} image={randomMovie.img} genre={randomMovie.genre}/>
-                <button className="pickButton" onClick={pickAgain}>Pick Again</button>
-            </div>}
-            {!picked && <button onClick={moviePicker}>Add a Receipt</button>}
+            <form onSubmit={handleUpload}>
+                <input type='file' name='file' onChange={handleFile}/>
+                <button>Upload</button>  
+            </form>
+
         </div>
     );
 }
