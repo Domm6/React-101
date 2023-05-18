@@ -1,12 +1,4 @@
-import {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {data} from '../data/data';
-import './AddMovie.css';
-
-const AddMovie = () => {
-    let navigate = useNavigate();
-
-    import { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { data } from '../data/data';
 import './AddMovie.css';
