@@ -9,6 +9,8 @@ const Header = () => {
                 <Link to="/movie">Upload Receipt</Link>
                 <Link to="/add">Manual upload</Link>
                 <Link to="/login">Login</Link>
+                <Link to="/Catalog">Display Receipt</Link>
+
             </div>
         </div>
     );
