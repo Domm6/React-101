@@ -4,11 +4,20 @@
     font-family: "CustomFont";
 }
 
-@font-face {
-    font-family: "CustomFont";
-    src: url("../fonts/RolexLight.woff2");
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
 /* --------------------------- MOBILE VERSION ------------------------------ */
 .page {
     height: 100vh;
@@ -29,7 +38,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center; /* Update this line */
+    margin: auto; /* Add this line */
 }
 
 .alt-login {
