@@ -1,2 +1,2 @@
-Link to Video Demonstration: https://www.youtube.com/watch?v=4yI2psG7oCk
-Link to Presentation: https://docs.google.com/presentation/d/1GBfatKfftybFAWsXD0mPLLf5xqXH2-lHfVBhfgqeuS4/edit?usp=sharing 
+- Link to Video Demonstration: https://www.youtube.com/watch?v=4yI2psG7oCk
+- Link to Presentation: https://www.linkedin.com/in/dominic-parker6/details/experience/2182414075/multiple-media-viewer/?profileId=ACoAADujWnQBSf122w9DRsckEvUJ5RX4Bc9sxcY&treasuryMediaId=1635527600058 
